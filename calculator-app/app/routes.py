@@ -8,7 +8,13 @@ calc = Calculator()
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World! This is my calculator app."
+    return ("Hello, World! This is my calculator app."+
+            "<ul>"+
+            "<li>To add, go to the endpoint /add</li>"+
+            "<li>To subtract, go to the endpoint /subtract</li>"+
+            "<li>To multiply, go to the endpoint /multiply</li>"+
+            "<li>To divide, go to the endpoint /divide</li>"+
+            "</ul>")
 
 @app.route('/add')
 def add():
