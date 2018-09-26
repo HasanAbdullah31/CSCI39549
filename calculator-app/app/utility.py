@@ -11,13 +11,3 @@ def str_to_num(x):
         except ValueError:
             # assert: x is a string of chars
             raise ValueError('string could not be converted to a number')
-
-def get_result(x, y, sign, func):
-    try:
-        x = str_to_num(x)
-        y = str_to_num(y)
-        return f'{x} {sign} {y} = {func(x,y)}'
-    except ValueError as err:
-        return f'There was an error with the inputs ({err}). Try again.'
-    except ZeroDivisionError:
-        return 'Cannot divide by zero! Try again.'
